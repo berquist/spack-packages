@@ -36,6 +36,8 @@ class Libecpint(CMakePackage):
     # Backport of https://github.com/robashaw/libecpint/pull/67
     patch("67-remove-c-compiler-dependency.diff", level=0)
 
+    variant("shared", description="Build shared libraries", default=True)
+
     def cmake_args(self):
-        args = ["-DBUILD_SHARED_LIBS=ON"]
+        args = [self.define_from_variant("BUILD_SHARED_LIBS", "shared")]
         return args
