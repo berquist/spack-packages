@@ -31,7 +31,7 @@ class Libecpint(CMakePackage):
 
     depends_on("cmake@3.12:", type="build")
     depends_on("pugixml")
-    depends_on("googletest")
+    depends_on("googletest cxxstd=11")
 
     # Backport of https://github.com/robashaw/libecpint/pull/67
     patch("67-remove-c-compiler-dependency.diff", level=0)
