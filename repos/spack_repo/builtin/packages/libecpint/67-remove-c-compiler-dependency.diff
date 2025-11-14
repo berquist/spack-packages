@@ -1,0 +1,19 @@
+commit 366913a341b3ae21ba9ee01668f12413e6101e9c
+Author: Eric Berquist <eric.berquist@gmail.com>
+Date:   2025-11-14 02:40:36 PM (Fri, 14 Nov 2025 14:40:36 -0500)
+
+    cmake: remove unused requirement for C compiler
+
+diff --git CMakeLists.txt CMakeLists.txt
+index 80d7069..3a4f901 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -17,7 +17,7 @@ endif(NOT CMAKE_BUILD_TYPE)
+ # define project
+ project( libecpint
+          VERSION 1.0.7
+-         LANGUAGES C CXX)
++         LANGUAGES CXX)
+ 
+ set(API_VERSION 1)
+ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
