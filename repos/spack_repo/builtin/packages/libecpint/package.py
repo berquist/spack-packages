@@ -16,7 +16,7 @@ class Libecpint(CMakePackage):
     url = "https://github.com/robashaw/libecpint/archive/v1.0.4.tar.gz"
     git = "https://github.com/robashaw/libecpint"
 
-    license("MIT")
+    license("MIT", checked_by="berquist")
 
     version("master", branch="master")
     version("1.0.7", sha256="e9c60fddb2614f113ab59ec620799d961db73979845e6e637c4a6fb72aee51cc")
